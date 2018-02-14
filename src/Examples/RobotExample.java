@@ -59,10 +59,11 @@ public class RobotExample {
         karel.putThing();
         karel.move();
         
-       
+        
+      
         
        
-      
+       
         
         
       
