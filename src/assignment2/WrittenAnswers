@@ -1,0 +1,14 @@
+
+1. Robot is on (1,5)
+a)true
+b)true
+c)false
+d)false
+e)false
+f)true
+g)true
+
+2.Same because the first statement means that if karel can pick up an object than it will turn right
+and if it can't it will turn left. In statement two it has a ! mark meaning if karel cannot pick up thing
+than he will turn left and if he can he will turn right. So therefore, the two statements are the same. 
+

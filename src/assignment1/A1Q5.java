@@ -53,7 +53,7 @@ public class A1Q5 {
          new Wall (Kw, 2, 3, Direction.EAST);
          new Wall (Kw, 3, 3, Direction.EAST);
          
-         //Maria picks up items and karel 
+         //Maria picks up items and karel picks up items and meet
          maria.move();
          maria.turnLeft();
          maria.pickThing();
