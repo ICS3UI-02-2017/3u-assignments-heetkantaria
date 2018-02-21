@@ -40,7 +40,6 @@ public class Challenge {
         new Wall(kw, 7, 0, Direction.WEST);
         new Wall(kw, 8, 0, Direction.WEST);
         new Wall(kw, 9, 0, Direction.WEST);
-
         new Wall(kw, 0, 2, Direction.WEST);
         new Wall(kw, 1, 2, Direction.WEST);
         new Wall(kw, 2, 2, Direction.WEST);
@@ -51,7 +50,6 @@ public class Challenge {
         new Wall(kw, 7, 2, Direction.WEST);
         new Wall(kw, 8, 2, Direction.WEST);
         new Wall(kw, 9, 2, Direction.WEST);
-
         new Wall(kw, 0, 2, Direction.EAST);
         new Wall(kw, 1, 3, Direction.NORTH);
         new Wall(kw, 1, 4, Direction.NORTH);
@@ -93,7 +91,7 @@ public class Challenge {
         new Thing(kw, 1, 0);
         new Thing(kw, 2, 0);
         new Thing(kw, 3, 0);
-         new Thing(kw, 7, 2);
+        new Thing(kw, 7, 2);
         new Thing(kw, 7, 7);
         new Thing(kw, 8, 3);
         new Thing(kw, 8, 4);
