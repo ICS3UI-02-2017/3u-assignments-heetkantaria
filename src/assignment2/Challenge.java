@@ -141,15 +141,16 @@ public class Challenge {
             // karel moves if front is clear
             while (karel.frontIsClear()) {
                 karel.move();
-
+                
+                //karel will pick thing 
                 if (karel.canPickThing()) {
                     karel.pickThing();
                 }
             }
             // karel turns around 
             if (!karel.frontIsClear()) {
-                karel.turnLeft();
-                karel.turnLeft();
+                karel.turnAround();
+               
             }
 
             // karel will go to sidewalk 
