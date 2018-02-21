@@ -29,12 +29,12 @@ public class A2Q3 {
         while (karel.getDirection() != Direction.NORTH) {
             karel.turnLeft();
         }
-        //create command for streets and avenue
+        //karel moves until street 0
         while (karel.getStreet() != 0) {
             karel.move();
         }
         karel.turnLeft();
-
+        //karel moves until avenue 0
         while (karel.getAvenue() != 0) {
             karel.move();
 
