@@ -29,7 +29,7 @@ public class ConditionsExample {
         //create a wall infront
         new Wall(kw, 2, 5, Direction.EAST);
 
-        //pace a few things
+        //place a few things
         new Thing(kw, 2, 2);
         new Thing(kw, 2, 4);
 

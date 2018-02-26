@@ -71,6 +71,8 @@ public class A2Q2 {
 
                 // stop karel in the position
                 break;
+                
+                
 
 
 
