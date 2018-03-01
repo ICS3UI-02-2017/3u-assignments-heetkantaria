@@ -42,7 +42,7 @@ public class A3Q3 {
                 karel.turnRight();
 
             }
-
+            //make karel move
             if (karel.getAvenue() == 1) {
                 karel.turnLeft();
             }
