@@ -41,7 +41,6 @@ public class A3Q2 {
         //show how many things to count
         kitchener.showThingCounts(true);
 
-
         //integer move is created
         int move = 0;
 

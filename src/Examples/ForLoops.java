@@ -46,17 +46,17 @@ public class ForLoops {
             karel.move();
         }
         
-        int x = 10;
-        x = x + 5; //adds 5
-        x += 5; //adds 5
+      //  int x = 10;
+       // x = x + 5; //adds 5
+       // x += 5; //adds 5
         
-        x -= 10; //subtract 10 shortcut
+      //  x -= 10; //subtract 10 shortcut
         
-        x *= 2; //multiply by 2
-        x = x * 2;
+     //   x *= 2; //multiply by 2
+     //   x = x * 2;
         
-        x /= 4;
-        x = x / 4;
+      //  x /= 4;
+      //  x = x / 4;
         
         //modulus or modulo
         int remainder = 5 % 2 ;

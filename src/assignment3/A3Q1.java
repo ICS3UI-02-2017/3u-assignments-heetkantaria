@@ -36,28 +36,18 @@ public class A3Q1 {
         new Wall(kw, 1, 2, Direction.EAST);
         new Wall(kw, 2, 2, Direction.EAST);
 
-        //loop created so karel moves around the walls 2 times
+        //karel will move around the walls 2 times
         int move = 0;
         while (move < 8) {
-            karel.move();
-            karel.move();
+            karel.move(2);
             karel.turnLeft();
             karel.move();
             move = move + 1;
 
-
-
-
-
-
-
-
-
-
-
+}
         }
 
 
 
 
-    }
+   
