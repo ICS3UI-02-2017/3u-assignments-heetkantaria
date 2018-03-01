@@ -46,10 +46,7 @@ public class InputOutput {
         System.out.println(number);
         System.out.println(" number = " + number);
         System.out.println(" number = " + number ". Yay);"
-        
-       
-        
-        
+      
         //use a scanner to read info
         Scanner input = new Scanner(System.in);
         
@@ -71,28 +68,6 @@ public class InputOutput {
         System.out.println("You are " + age + "  years old ");
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-
-
-
-
-
+ 
     }
 }
