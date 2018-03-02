@@ -51,6 +51,7 @@ public class InputOutput {
         Scanner input = new Scanner(System.in);
         
         System.out.println(" Please enter your name ");
+        
         //make a string to store a name
         String name = input.nextLine();
         

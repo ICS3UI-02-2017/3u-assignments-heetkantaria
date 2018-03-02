@@ -21,7 +21,7 @@ public class A4Q2 {
         Scanner input = new Scanner(System.in);
         
         //create a string
-        String number;
+        String measurement;
 
         // system asks the to enter the measurement in iches that you need to convert
         System.out.println ("Please enter the measurement in inches you wish to convert:");

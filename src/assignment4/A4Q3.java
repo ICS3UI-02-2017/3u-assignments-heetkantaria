@@ -19,12 +19,12 @@ public class A4Q3 {
         
         // create a scanner
         Scanner input = new Scanner(System.in);
+        
         //create a string
         String number;
 
         // system tells to enter in 4 numbers
-        
-        System.out.println("Please enter in 4 numbers on seperate lines:");
+        System.out.println(" Please enter in 4 numbers on seperate lines: ");
         
         // input number in next line
         double one = input.nextDouble();
