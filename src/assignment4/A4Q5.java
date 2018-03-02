@@ -16,7 +16,7 @@ public class A4Q5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-           //use a scanner to read info
+        //use a scanner to read info
         Scanner input = new Scanner(System.in);
 
         //create something to answer
@@ -25,8 +25,8 @@ public class A4Q5 {
         //make a string to store a name
         String name = input.nextLine();
 
-      
 
-        
+
+
     }
 }
