@@ -31,7 +31,7 @@ public class A4Q1 {
 
         //ask how are they and on same line as one above
         System.out.print(". How are you today? ");
-        
-       
+
+
     }
 }
