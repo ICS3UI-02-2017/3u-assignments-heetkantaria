@@ -20,42 +20,42 @@ public class A4Q4 {
         //use a scanner to read info
         Scanner input = new Scanner(System.in);
 
+        //make a string to store a name
+        String name;
+
+
         //write the first question
         System.out.print(" How much does the food for prom cost? : ");
+        int one = input.nextInt();
 
-        //make a string to store a name
-        String name = input.nextLine();
-        
         //write the second question
         System.out.print(" How much does the DJ cost? : ");
-        
+        int two = input.nextInt();
+
         //write the third question
-        String name2 = input.nextLine();
         System.out.print(" How much does it cost to rent the hall? : ");
-        
+        int three = input.nextInt();
+
         //write the fourth question
-         String name3 = input.nextLine();
         System.out.print(" How much does decorations cost? : ");
-        
+        int four = input.nextInt();
+
         //write the fifth question
-         String name4 = input.nextLine();
         System.out.print(" How much does it cost for staff? : ");
-        
-        //wirte the sixth question
-         String name5 = input.nextLine();
-         System.out.print("How much for miscellaneous costs? : ");
-        String name6 = input.nextLine();
-        
-      
+        int five = input.nextInt();
 
+        //write the sixth question
+        System.out.print("How much for miscellaneous costs? : ");
+        int six = input.nextInt();
 
+        //create a variable for cost
+        int cost = (one + two + three + four + five + six);
 
+        // divide by the 35(ticket price)
+        int answer = (cost / 35);
 
-
-
-
-
-
+        //output total cost and write the writing for the answer
+        System.out.println(" The cost is " + cost + ". You will need to sell " + answer + " tickets to break even. ");
 
 
 
