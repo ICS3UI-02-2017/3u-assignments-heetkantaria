@@ -45,7 +45,7 @@ public class A4Q6 {
         } //km/h over limit 31 or above
         else if (answer >= 31) {
 
-            //// If person is speeding it will say the following
+            // If person is speeding it will say the following
             System.out.println("You are speeding and your fine is $500.");
             
         }
