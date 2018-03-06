@@ -20,7 +20,7 @@ public class A4Q6 {
         // Create a scanner
         Scanner input = new Scanner(System.in);
 
-        // input the speed limit
+        // input the speed limit line
         System.out.print("Enter the speed limit: ");
         int speedlimit = input.nextInt();
 
