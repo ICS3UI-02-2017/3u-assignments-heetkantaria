@@ -16,63 +16,69 @@ public class A4Q5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //use a scanner to read info
+        //create a scanner
         Scanner input = new Scanner(System.in);
 
-        //create something to answer
-        System.out.print(" Please enter your name: ");
-
-        //make a string to store a name
+        //create a string
         String name;
-        
-         // input name
+
+        //print the first line
+        System.out.print("Please enter your name: ");
         name = input.nextLine();
-     
-        //ask question 1
+
+        // Add the questions and find average for the first one
         System.out.print("What was the first test out of?: ");
-        double Test1 = input.nextDouble();
-        
-        // ask the mark 
-        System.out.print("what mark did you get?: ");
-        double Mark1 = input.nextDouble();
+        double test = input.nextDouble();
 
-        //ask question 2 
+        System.out.print("What mark did you get?: ");
+        double one = input.nextDouble();
+        double ones = (double) (one / test * 100);
+
+        // Add the questions and find average for the second one 
         System.out.print("What was the second test out of?: ");
-        double Test2 = input.nextDouble();
-        // ask the mark 
-        System.out.print("what mark did you get?: ");
-        double Mark2 = input.nextDouble();
+        double test2 = input.nextDouble();
 
-        //ask question 3 
+        System.out.print("What mark did you get?: ");
+        double two = input.nextDouble();
+        double twos = (double) (two / test2 * 100);
+
+        // Add the questions and find average for the third one
         System.out.print("What was the third test out of?: ");
-        double Test3 = input.nextDouble();
-        // ask the mark 
-        System.out.print("what mark did you get?: ");
-        double Mark3 = input.nextDouble();
+        double test3 = input.nextDouble();
 
-        //ask question 4 
+        System.out.print("What mark did you get?: ");
+        double three = input.nextDouble();
+        double threes = (double) (three / test3 * 100);
+
+        // Add the questions and find average for the fourth one 
         System.out.print("What was the fourth test out of?: ");
-        double Test4 = input.nextDouble();
-        // ask the mark 
-        System.out.print("what mark did you get?: ");
-        double Mark4 = input.nextDouble();
+        double test4 = input.nextDouble();
 
-        //ask question 5 
+        System.out.print("What mark did you get?: ");
+        double four = input.nextDouble();
+        double fours = (double) (four / test4 * 100);
+
+        // Add the questions and find average for the fifth one
         System.out.print("What was the fifth test out of?: ");
-        double Test5 = input.nextDouble();
-        // ask the mark 
-        System.out.print("what mark did you get?: ");
-        double Mark5 = input.nextDouble();
+        double test5 = input.nextDouble();
 
-        // each score gets totaled by percentage  
-        double score1 = (Mark1 / Test1) * 100;
-        double score2 = (Mark2 / Test2) * 100;
-        double score3 = (Mark3 / Test3) * 100;
-        double score4 = (Mark4 / Test4) * 100;
-        double score5 = (Mark5 / Test5) * 100;
+        System.out.print("What mark did you get?: ");
+        double five = input.nextDouble();
+        double fives = (double) (five / test5 * 100);
 
-       
+        // Output all the averages for the tests so it is printed in the lines in order
+        System.out.println("Test scores for " + name + "");
+        System.out.println("Test 1: " + ones + "%");
+        System.out.println("Test 2: " + twos + "%");
+        System.out.println("Test 3: " + threes + "%");
+        System.out.println("Test 4: " + fours + "%");
+        System.out.println("Test 5: " + fives + "%");
 
+        // Average of all calculated to find the final total average of all marks
+        double average = (double) ((ones + twos + threes + fours + fives) / 5);
+
+        // Final average line written 
+        System.out.println("Average: " + average + "%.");
 
 
 
