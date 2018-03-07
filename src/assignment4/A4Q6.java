@@ -37,7 +37,7 @@ public class A4Q6 {
         if (answer <= 0) {
             System.out.print("Congratulations, you are within the speed limit! ");
 
-        } //Add the km/h over the speed limit 
+        }//Add the km/h over the speed limit 
         //km/h over limit 1  to 20
         else if (1 <= answer & answer <= 20) {
         } //km/h over limit 21 to 30
@@ -47,7 +47,7 @@ public class A4Q6 {
 
             // If person is speeding it will say the following
             System.out.println("You are speeding and your fine is $500.");
-            
+
         }
     }
 }
