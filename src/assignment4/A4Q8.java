@@ -31,8 +31,10 @@ public class A4Q8 extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jTextField2 = new javax.swing.JTextField();
-        sayhello = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        helloButton = new javax.swing.JButton();
+        name = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        textArea = new javax.swing.JTextArea();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -46,12 +48,22 @@ public class A4Q8 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        sayhello.setText("Say Hello");
-        sayhello.addActionListener(new java.awt.event.ActionListener() {
+        helloButton.setText("Say Hello");
+        helloButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sayhelloActionPerformed(evt);
+                helloButtonActionPerformed(evt);
             }
         });
+
+        name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameActionPerformed(evt);
+            }
+        });
+
+        textArea.setColumns(20);
+        textArea.setRows(5);
+        jScrollPane3.setViewportView(textArea);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -61,28 +73,45 @@ public class A4Q8 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(151, 151, 151)
-                        .addComponent(sayhello, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(helloButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(96, Short.MAX_VALUE))
+                        .addGap(111, 111, 111)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 100, Short.MAX_VALUE)
+                .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(93, 93, 93))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
-                .addComponent(sayhello)
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addGap(56, 56, 56)
+                .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(helloButton)
+                .addGap(28, 28, 28)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void sayhelloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sayhelloActionPerformed
+    private void helloButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helloButtonActionPerformed
+        //
+        String name = textArea.getText();
+        
+        //say hello to the user
+       textArea.setText("Hello " + name + ""); 
+        
+          
+        
+    }//GEN-LAST:event_helloButtonActionPerformed
+
+    private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_sayhelloActionPerformed
+    }//GEN-LAST:event_nameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,12 +148,14 @@ public class A4Q8 extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton helloButton;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JButton sayhello;
+    private javax.swing.JTextField name;
+    private javax.swing.JTextArea textArea;
     // End of variables declaration//GEN-END:variables
 }
