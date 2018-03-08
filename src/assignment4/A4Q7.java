@@ -60,7 +60,7 @@ public class A4Q7 {
             if (Sum == 67) {
                 Sum = 86;
             }
-            //ladder 4
+            
             if (Sum == 101) {
                 Sum = Sum - number;
             }
