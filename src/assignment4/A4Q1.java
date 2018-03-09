@@ -21,7 +21,7 @@ public class A4Q1 {
         Scanner input = new Scanner(System.in);
 
         //create something to answer
-        System.out.println(" Please enter your name ");
+        System.out.print(" Please enter your name: ");
 
         //make a string to store a name
         String name = input.nextLine();
