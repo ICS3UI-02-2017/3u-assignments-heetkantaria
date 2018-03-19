@@ -23,7 +23,7 @@ public class A4Q7 {
         int Sum = 1;
 
         //create a while loop that has the number limit of 100
-        while (Sum < 100) {
+        while (Sum != 100) {
 
             //Output the sum of dice line/sentence
             System.out.print("Enter sum of dice: ");
