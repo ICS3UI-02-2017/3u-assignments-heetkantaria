@@ -155,7 +155,7 @@ public class A4Q9 extends javax.swing.JFrame {
 
     private void subButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subButtonActionPerformed
         // Following is for subtracting  firstTbox with secondTbox
-        // create variables
+        // create 2 variables 
         double first = Double.parseDouble(firstTbox.getText());
         double second = Double.parseDouble(secondTbox.getText());
 
@@ -168,7 +168,7 @@ public class A4Q9 extends javax.swing.JFrame {
 
     private void mulButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulButtonActionPerformed
         // following is for multiplying firstTbox to secondTbox
-        // create variables
+        // create 2 variables
         double first = Double.parseDouble(firstTbox.getText());
         double second = Double.parseDouble(secondTbox.getText());
 
@@ -186,7 +186,7 @@ public class A4Q9 extends javax.swing.JFrame {
 
     private void divButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divButtonActionPerformed
         // following is for dividing firstTbox to secondTbox
-        // create variables
+        // create 2 variables
         double first = Double.parseDouble(firstTbox.getText());
         double second = Double.parseDouble(secondTbox.getText());
 
@@ -199,7 +199,7 @@ public class A4Q9 extends javax.swing.JFrame {
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // following is for adding firstTbox to secondTbox
-        // create variables
+        // create 2 variables
         double first = Double.parseDouble(firstTbox.getText());
         double second = Double.parseDouble(secondTbox.getText());
 
