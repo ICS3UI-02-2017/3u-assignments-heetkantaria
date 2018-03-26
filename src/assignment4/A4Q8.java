@@ -98,7 +98,7 @@ public class A4Q8 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void helloButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helloButtonActionPerformed
-        //
+        //create a string
         String name = nameInput.getText();
         
         //say hello to the user
