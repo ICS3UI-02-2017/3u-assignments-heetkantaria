@@ -35,13 +35,16 @@ public class A5Q1 {
             //sanitize the input
             orig = orig.toLowerCase();
 
-            //use a loop to go through the characvters andlook for a vowel
+            //use a loop to go through the characters and look for a vowel
             for (int abcpos = 0; abcpos < translate.length(); abcpos++) {
 
                 //check if any of the words contain the vowels
                 //repeated for all vowels
                 if (translate.charAt(abcpos) == 'e' || translate.charAt(abcpos) == 'a' || translate.charAt(abcpos) == 'o' || translate.charAt(abcpos) == 'u' || translate.charAt(abcpos) == 'i') {
-
+                
+                 //if it starts with vowels
+                    if(orig.startsWith("a") || orig.startsWith("e") || orig.startsWith("i") || orig.startsWith("o") || orig.startsWith("u")) {
+                        
                     //if two vowels are in a row, it will only put ub infront of the first one
                     //Repeated for all vowels
                     if (!(translate.charAt(abcpos - 2) == 'e' || translate.charAt(abcpos - 2) == 'a' || translate.charAt(abcpos - 2) == 'o' || translate.charAt(abcpos - 2) == 'i' || translate.charAt(abcpos - 2) == 'u')) {
