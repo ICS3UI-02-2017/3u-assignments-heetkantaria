@@ -24,7 +24,7 @@ public class A5Q1 {
             Scanner input = new Scanner(System.in);
 
             //tell user to enter in a word to translate
-            System.out.println("Enter a word to translate to Ubbi Dubbi:");
+            System.out.println("Enter a word to translate to Ubbi Dubbi: ");
 
             //create a string
             String orig = input.nextLine();
@@ -41,10 +41,7 @@ public class A5Q1 {
                 //check if any of the words contain the vowels
                 //repeated for all vowels
                 if (translate.charAt(abcpos) == 'e' || translate.charAt(abcpos) == 'a' || translate.charAt(abcpos) == 'o' || translate.charAt(abcpos) == 'u' || translate.charAt(abcpos) == 'i') {
-                
-                 //if it starts with vowels
-                    if(orig.startsWith("a") || orig.startsWith("e") || orig.startsWith("i") || orig.startsWith("o") || orig.startsWith("u")) {
-                        
+                 
                     //if two vowels are in a row, it will only put ub infront of the first one
                     //Repeated for all vowels
                     if (!(translate.charAt(abcpos - 2) == 'e' || translate.charAt(abcpos - 2) == 'a' || translate.charAt(abcpos - 2) == 'o' || translate.charAt(abcpos - 2) == 'i' || translate.charAt(abcpos - 2) == 'u')) {
