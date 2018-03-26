@@ -120,7 +120,8 @@ public class A4Q10 extends javax.swing.JFrame {
     }//GEN-LAST:event_FtoCbuttonActionPerformed
 
     private void CtoFbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CtoFbuttonActionPerformed
-         // create a variable for celsius
+        // same process as the one for fahreheit
+        // create a variable for celsius
         double c = Double.parseDouble(celsius.getText());
 
         // conversion for celsius to fahrenheit

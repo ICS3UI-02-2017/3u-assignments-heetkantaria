@@ -167,6 +167,7 @@ public class A4Q9 extends javax.swing.JFrame {
     }//GEN-LAST:event_subButtonActionPerformed
 
     private void mulButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulButtonActionPerformed
+        // repeat the same process did above for the rest of the math signs
         // following is for multiplying firstTbox to secondTbox
         // create 2 variables
         double first = Double.parseDouble(firstTbox.getText());
@@ -185,6 +186,7 @@ public class A4Q9 extends javax.swing.JFrame {
     }//GEN-LAST:event_firstTboxActionPerformed
 
     private void divButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divButtonActionPerformed
+
         // following is for dividing firstTbox to secondTbox
         // create 2 variables
         double first = Double.parseDouble(firstTbox.getText());
