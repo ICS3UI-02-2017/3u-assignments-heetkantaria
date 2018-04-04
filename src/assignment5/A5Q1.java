@@ -23,7 +23,7 @@ public class A5Q1 {
             Scanner input = new Scanner(System.in);
 
             //tell user to enter in a word to translate
-            System.out.println("Enter a word you would like to translate into Ubbi Dubbi: ");
+            System.out.println("Enter a word or sentence you would like to translate into Ubbi Dubbi: ");
 
             // make a string for the original word
             String orig = input.nextLine();
