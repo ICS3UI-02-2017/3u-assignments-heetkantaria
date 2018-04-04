@@ -42,7 +42,7 @@ public class A5Q1 {
                 System.out.println(orig + " in Ubbi Dubbi is " + translate2);
 
             } else {
-                //count how many letters in in the word 
+                //count how many letters are in the word 
                 int length = translate.length();
 
                 // use a for loop to go through the characters and look for a vowel
@@ -54,7 +54,6 @@ public class A5Q1 {
 
                         //if two vowels are in a row, it will only put ub infront of the first one
                         //Repeated for all vowels 
-
                         if (!(translate.charAt(pos - 2) == 'e' || translate.charAt(pos - 2) == 'a' || translate.charAt(pos - 2) == 'i' || translate.charAt(pos - 2) == 'u' || translate.charAt(pos - 2) == 'o')) {
 
                             // adds "ub" infront of the vowel 
@@ -67,14 +66,14 @@ public class A5Q1 {
                             // update the length of the translated word
                             length = translate.length();
 
-                            // Checks letter position of next 3
+                            // Checks letter position of next 3 aswell
                             pos = pos + 3;
 
                         }
                     }
-
                 }
 
+                // Output the translated word 
                 System.out.println(orig + " In ubbi dubbi is " + translate + ".");
 
                 //done looking so stop the loop
