@@ -26,7 +26,7 @@ public class A6Q1 {
         //user will enter in marks
         System.out.println("Enter the marks: ");
 
-        //mark an array to store marks
+        //create an array to store marks
         double[] marks = new double[num];
 
         //use a for loop for input
