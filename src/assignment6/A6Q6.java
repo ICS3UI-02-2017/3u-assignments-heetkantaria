@@ -83,10 +83,10 @@ public class A6Q6 {
             }
         }
         // Output the lowest mark
-        System.out.println("The lowest mark is " + marks[0] + "%.");
+        System.out.println("The lowest mark in the class is " + marks[0] + "%.");
 
         //Output the highest mark
-        System.out.println("The hightest mark is " + marks[marks.length - 1] + "%.");
+        System.out.println("The hightest mark in the class is " + marks[marks.length - 1] + "%.");
 
 
     }
