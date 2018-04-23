@@ -19,13 +19,13 @@ public class A6Q5 {
 
         //Create a scanner
         Scanner input = new Scanner(System.in);
-        
+
         // Ask the user how many students are in the class to determine the array num
         System.out.println("How many student marks are there in the class?");
 
         //create a variable to have any number
         int num = input.nextInt();
-        
+
         //Change the 10 to any number(what we did in assignment 4)
         //create an array to store marks
         double[] marks = new double[num];
@@ -77,7 +77,7 @@ public class A6Q5 {
 
             //Else if statement for the odd group of numbers for example, 5 marks, 7 marks
         } else {
-          
+
             // Calculate the median with odd amount of numbers
             int median = marks.length / 2;
             double medians = marks[median];

@@ -31,7 +31,7 @@ public class A6Q3 {
 
         //If the first number is greater it will swap it with the second
         if (A[0] > A[1]) {
-           int swap = A[0];
+            int swap = A[0];
             A[0] = A[1];
             A[1] = swap;
 
