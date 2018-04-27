@@ -53,5 +53,6 @@ public class A6Q7 {
 
         System.out.println("These are the prime numbers between 1-1000. ");
 
+
     
 }
