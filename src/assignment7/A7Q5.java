@@ -10,11 +10,16 @@ package assignment7;
  */
 public class A7Q5 {
 
-    public static void chaotic() /**
+    /**
      * @param args the command line arguments
      */
-
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        
     }
-}
+
+
+    }
+
+

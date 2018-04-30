@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class A7Q6 {
 
-    //create a Methof
+    //create a Method
     public static int lastDigit(int number) {
 
         //determine the last integer and return it

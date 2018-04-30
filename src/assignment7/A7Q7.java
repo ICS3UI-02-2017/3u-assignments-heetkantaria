@@ -21,8 +21,7 @@ public class A7Q7 {
 
      }
         
-       
-         
+
      //return the number
      return num;
     }
