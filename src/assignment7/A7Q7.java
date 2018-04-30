@@ -18,7 +18,11 @@ public class A7Q7 {
         //if number is greater than 9 then it is divided until the first digit left 
         while(num > 9) {
           num /= 10;
+
      }
+        
+       
+         
      //return the number
      return num;
     }
@@ -40,5 +44,7 @@ public class A7Q7 {
         //output the first digit of the integer that was inputed
         System.out.print("The first digit of the integer is " + firstDigit(number) + ". ");
         
+        
+     
 }
 }

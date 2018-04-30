@@ -29,7 +29,7 @@ public class A7Q6 {
 
         //user prints out a number or integer
         System.out.print("Enter in an integer: ");
-        
+
         //create an integer
         int number = input.nextInt();
 
