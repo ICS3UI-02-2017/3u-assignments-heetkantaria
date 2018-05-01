@@ -4,7 +4,6 @@
  */
 package assignment7;
 
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**

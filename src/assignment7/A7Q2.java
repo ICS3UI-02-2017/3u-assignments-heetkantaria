@@ -4,7 +4,6 @@
  */
 package assignment7;
 
-import static assignment7.A7Q7.firstDigit;
 import java.util.Scanner;
 
 /**
