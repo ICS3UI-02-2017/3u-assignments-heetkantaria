@@ -24,7 +24,7 @@ public class A7Q7 {
         int negativenum = 0;
         while (num <= -10) {
             num = num / 10;
-            negativenum = num * -1;
+            negativenum = num * 1;
 
         }
         return num;
