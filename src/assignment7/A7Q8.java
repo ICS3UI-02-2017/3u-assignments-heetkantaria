@@ -12,17 +12,17 @@ import java.util.Scanner;
  */
 public class A7Q8 {
 
-    //Create a method to determine whether or not there are odd numbers in a number inputed
+    //Create a method to determine whether or not there are odd numbers in the number inputed
     public static boolean allDigitsOdd(int[] digits) {
 
         //Create a boolean for true or false
         boolean oddNum = true;
 
         //create a for loop
-        //if remander is equal to 0 then it is even number if there is a remainder then its a odd 
+        //if remander is equal to 0 = even number, if remainder = odd 
         for (int i = 0; i < digits.length; i++) {
 
-            //if number can be divided by 2 then set odd as false since it will be an even number
+            //if number can be divided by 2 then odd is false since it will be an even number
             if (digits[i] % 2 == 0) {
                 oddNum = false;
             }
@@ -63,7 +63,7 @@ public class A7Q8 {
 
             //if numbers are even
         } else {
-            System.out.println("There are even numbers in the number entered. ");
+            System.out.println("There are even numbers in the number you have entered. ");
         }
 
     }
