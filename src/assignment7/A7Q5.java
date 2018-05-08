@@ -24,7 +24,7 @@ public class A7Q5 {
             //space inserted so all asterisks are not on the same line
             System.out.println(" ");
 
-            //create a for loop to go through the randNum and replace with asterisks
+            //create a for loop to go through the int randNum and replace with asterisks
             for (int n = 0; n < randNum; n++) {
 
                 //print out the asterisks
