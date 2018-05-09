@@ -39,8 +39,11 @@ public class A8Q1 extends JComponent implements ActionListener {
 
     // YOUR GAME VARIABLES WOULD GO HERE
     
-
-
+    //create a custom colour
+      Color custom = new Color(66, 244, 226);
+     Color tan = new Color(224, 178, 143);
+    Color brown = new Color(112, 94, 84);
+ 
     // GAME VARIABLES END HERE    
 
     
@@ -84,8 +87,42 @@ public class A8Q1 extends JComponent implements ActionListener {
 
         // GAME DRAWING GOES HERE
         
-		
-		
+        //use custom colour for the background
+        g.setColor(custom);
+          
+         //create a background
+        g.fillRect(0, 0, WIDTH, HEIGHT);
+        
+        //Draw a tan oval for the face
+        g.setColor(tan);
+        g.fillOval(100, 125, 400, 300);
+	
+        //Make the outside of the eye
+        g.setColor(Color.WHITE);
+        g.fillOval(185, 200, 75, 55);
+       g.fillOval(325, 200, 75, 55);
+        
+       //make the inside pupil of the eye
+       g.setColor(Color.BLACK);
+       //left eye
+        g.fillOval(200, 215, 35, 35);
+        //right eye
+       g.fillOval(345, 215, 35, 35);
+        
+       //create a hat
+       g.setColor(brown);
+       g.fillRect(175, 85, 300, 55);
+       //small rectangle on hat
+         g.fillRect(250, 30 , 110, 100);
+        
+         //create the nose of the character
+         g.setColor(Color.BLACK);
+          g.fillArc(125, 250, 300, 300, 70, 20 );
+         
+          
+          
+          
+         
         // GAME DRAWING ENDS HERE
     }
 

@@ -27,7 +27,7 @@ public class A7Q8 {
                 oddNum = false;
             }
         }
-        
+
         //return the odd number
         return oddNum;
     }
