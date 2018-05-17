@@ -23,33 +23,43 @@ public class A8Q1 extends JComponent implements ActionListener {
     // Height and Width of our game
     static final int WIDTH = 800;
     static final int HEIGHT = 600;
-
     //Title of the window
     String title = "My Game";
-
     // sets the framerate and delay for our game
     // this calculates the number of milliseconds per frame
     // you just need to select an approproate framerate
     int desiredFPS = 60;
     int desiredTime = Math.round((1000 / desiredFPS));
-    
     // timer used to run the game loop
     // this is what keeps our time running smoothly :)
     Timer gameTimer;
-
+    
+    
     // YOUR GAME VARIABLES WOULD GO HERE
     
     //create a custom colour
-      Color custom = new Color(66, 244, 226);
-     Color tan = new Color(224, 178, 143);
+    Color custom = new Color(66, 244, 226);
+    Color tan = new Color(224, 178, 143);
     Color brown = new Color(112, 94, 84);
- 
-    // GAME VARIABLES END HERE    
 
+    //animate the tongue
+    int tongue = 220;
+   
+    //animate so the lines move up and down
+     int line = 50;
+    int lineDirection= 1;
+
+    //The eyes will move up and down
+    int eye = 300;
+    int eyesDirection = 1;
+    
+    
+    // GAME VARIABLES END HERE    
+    
     
     // Constructor to create the Frame and place the panel in
     // You will learn more about this in Grade 12 :)
-    public A8Q1(){
+    public A8Q1() {
         // creates a windows to show my game
         JFrame frame = new JFrame(title);
 
@@ -71,8 +81,8 @@ public class A8Q1 extends JComponent implements ActionListener {
         this.addMouseMotionListener(m);
         this.addMouseWheelListener(m);
         this.addMouseListener(m);
-        
-        gameTimer = new Timer(desiredTime,this);
+
+        gameTimer = new Timer(desiredTime, this);
         gameTimer.setRepeats(true);
         gameTimer.start();
     }
@@ -86,58 +96,114 @@ public class A8Q1 extends JComponent implements ActionListener {
         g.clearRect(0, 0, WIDTH, HEIGHT);
 
         // GAME DRAWING GOES HERE
-        
+
         //use custom colour for the background
         g.setColor(custom);
-          
-         //create a background
+
+        //create a background
         g.fillRect(0, 0, WIDTH, HEIGHT);
+       
+        //Create lines for the background
+        g.setColor(Color.BLACK);
+       g.fillRect(0, line, 1100, 30);
+         g.fillRect(0, line, 1100, 30);
         
         //Draw a tan oval for the face
         g.setColor(tan);
         g.fillOval(100, 125, 400, 300);
-	
+
         //Make the outside of the eye
         g.setColor(Color.WHITE);
         g.fillOval(185, 200, 75, 55);
-       g.fillOval(325, 200, 75, 55);
-        
-       //make the inside pupil of the eye
-       g.setColor(Color.BLACK);
-       //left eye
-        g.fillOval(200, 215, 35, 35);
+        g.fillOval(325, 200, 75, 55);
+
+        //make the inside pupil of the eye
+        g.setColor(Color.BLACK);
+        //left eye
+        g.fillOval(210, eye, 25, 25);
         //right eye
-       g.fillOval(345, 215, 35, 35);
+        g.fillOval(350, eye, 25, 25);
+
+        //create a hat
+        g.setColor(brown);
+        g.fillRect(160, 100, 300, 55);
+
+        //small rectangle on hat
+        g.fillRect(255, 5, 100, 150);
+
+        //Create a small rectangle as a logo for the hat
+        g.setColor(Color.YELLOW);
+        g.fillRect(275, 25, 50, 70);
+
+        //create the nose of the character
+        g.setColor(Color.BLACK);
+        g.fillArc(125, 250, 300, 100, 70, 20);
+
+        //Create a mouth 
+        g.fillArc(175, 275, 250, 100, 180, 180);
+
+        //create the tounge
+        g.setColor(Color.RED);
+        g.fillArc(tongue, 345, 250, 50, 120, 120);
+
+        //create eyebrows
+        g.setColor(Color.BLACK);
+        g.fillArc(195, 180, 240, 30, 25, 50);
+        g.fillArc(40, 180, 240, 30, 10, 60);
+
+        //Make a Sun
+        g.setColor(Color.YELLOW);
+        g.fillArc(1, 1, 130, 130, 450, 450);
         
-       //create a hat
-       g.setColor(brown);
-       g.fillRect(175, 85, 300, 55);
-       //small rectangle on hat
-         g.fillRect(250, 30 , 110, 100);
         
-         //create the nose of the character
-         g.setColor(Color.BLACK);
-          g.fillArc(125, 250, 300, 300, 70, 20 );
-         
-          
-          
-          
-         
+        
+        
+       
+        
+
         // GAME DRAWING ENDS HERE
     }
 
     // This method is used to do any pre-setup you might need to do
     // This is run before the game loop begins!
+    
     public void preSetup() {
         // Any of your pre setup before the loop starts should go here
-
     }
 
     // The main game loop
     // In here is where all the logic for my game will go
     public void gameLoop() {
         
+        //Make the tongue move across the screen
+        tongue = tongue + 4;
+        if(tongue > WIDTH){
+            tongue = 110;
+        }
+        
+        //the black line will move up and down from one end of the screen to the other
+            if(line >=600) {
+                lineDirection = -1;
+            }
+            if(line <=10) {
+                lineDirection = 1;
+            }
+            //The speed it will move
+            line = line + lineDirection*10;
+       
+     //Move the eyes coming down, to its location
+     //Once the eyes go up, it will stay there and shake
+            if(eye >= 200) {
+                eyesDirection = -1;
+            }            
+            if(eye <= 237) {
+                eyesDirection = 1;
+            }
+            //It will move slow
+            eye = eye + eyesDirection*1;
+        
     }
+    
 
     // Used to implement any of the Mouse Actions
     private class Mouse extends MouseAdapter {
@@ -145,25 +211,21 @@ public class A8Q1 extends JComponent implements ActionListener {
         // if a mouse button has been pressed down
         @Override
         public void mousePressed(MouseEvent e) {
-
         }
 
         // if a mouse button has been released
         @Override
         public void mouseReleased(MouseEvent e) {
-
         }
 
         // if the scroll wheel has been moved
         @Override
         public void mouseWheelMoved(MouseWheelEvent e) {
-
         }
 
         // if the mouse has moved positions
         @Override
         public void mouseMoved(MouseEvent e) {
-
         }
     }
 
@@ -173,13 +235,11 @@ public class A8Q1 extends JComponent implements ActionListener {
         // if a key has been pressed down
         @Override
         public void keyPressed(KeyEvent e) {
-
         }
 
         // if a key has been released
         @Override
         public void keyReleased(KeyEvent e) {
-
         }
     }
 
@@ -198,4 +258,3 @@ public class A8Q1 extends JComponent implements ActionListener {
         A8Q1 game = new A8Q1();
     }
 }
-

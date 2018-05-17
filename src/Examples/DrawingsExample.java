@@ -40,8 +40,14 @@ public class DrawingsExample extends JComponent implements ActionListener {
     // YOUR GAME VARIABLES WOULD GO HERE
     
     Color custom = new Color(66, 244, 226);
-
-
+    int pacmanX = 100;
+    int pacmanAngle = 45;
+    int PacmanRotate = 270;
+    boolean pacmanClosing = true;
+    
+    int mouseX = 0;
+    int mouseY = 0;
+    
     // GAME VARIABLES END HERE    
 
     
@@ -111,14 +117,15 @@ public class DrawingsExample extends JComponent implements ActionListener {
         g.fillRoundRect(300, 75, 150, 50, 20, 40);
         
         //draw a polygon
-        int[] triangleX = {500, 600, 450};
-        int[] triangleY = {400, 500, 500};
+        int[] triangleX = {mouseX, 600, 450};
+        int[] triangleY = {mouseY, 500, 500};
         
         g.fillPolygon(triangleX, triangleX, 3);
         
         //create a pacman shape
         g.setColor(Color.YELLOW);
-        g.fillArc(100, 400, 100, 100, 45, 270);
+        //Animation
+        g.fillArc(pacmanX, 400, 100, 100, pacmanAngle, PacmanRotate);
         g.drawLine(250, 125, 500, 400);
         
         
@@ -141,8 +148,28 @@ public class DrawingsExample extends JComponent implements ActionListener {
     // The main game loop
     // In here is where all the logic for my game will go
     public void gameLoop() {
+        //Move pacman across the screen
+        pacmanX = pacmanX + 3;
         
+        //when pacman leaves the screen
+        if(pacmanX > WIDTH){
+            pacmanX = -100;
+        }
+        
+        //make pacman roll
+        if(pacmanClosing){
+        pacmanAngle = pacmanAngle - 3;
+          if(pacmanX > WIDTH){
+           pacmanX = -45;
+    }else{
+                pacmanAngle = pacmanAngle+3;
+          PacmanRotate = PacmanRotate + 3;
+          }
+             
+         
     }
+    }
+        
 
     // Used to implement any of the Mouse Actions
     private class Mouse extends MouseAdapter {
@@ -168,7 +195,12 @@ public class DrawingsExample extends JComponent implements ActionListener {
         // if the mouse has moved positions
         @Override
         public void mouseMoved(MouseEvent e) {
-
+               //set mouse coordinated
+            mouseX = e.getX();
+                mouseY = e.getY();
+                
+             
+            
         }
     }
 
