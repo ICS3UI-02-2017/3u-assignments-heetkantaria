@@ -42,17 +42,29 @@ public class A8Q1 extends JComponent implements ActionListener {
     Color tan = new Color(224, 178, 143);
     Color brown = new Color(112, 94, 84);
 
-    //animate the tongue
-    int tongue = 220;
+    //animate the tongue to move up and down
+    int tongue = 345;
+   int tongueDirect = 1;
    
     //animate so the lines move up and down
      int line = 50;
-    int lineDirection= 1;
+    int lineDirect = 1;
 
     //The eyes will move up and down
     int eye = 300;
-    int eyesDirection = 1;
+    int eyesDirect = 1;
     
+     //the nose moves up and down
+    int nose = 250;
+    int noseDirect = 1;
+    
+    //make the  right eyebrows move side to side
+    int eyebrowR = 195;
+    int eyebrowRDirect = 1;
+    
+    //make the  right eyebrows move side to side
+    int eyebrowL = 40;
+    int eyebrowLDirect = 1;
     
     // GAME VARIABLES END HERE    
     
@@ -134,27 +146,28 @@ public class A8Q1 extends JComponent implements ActionListener {
         //Create a small rectangle as a logo for the hat
         g.setColor(Color.YELLOW);
         g.fillRect(275, 25, 50, 70);
-
+ 
         //create the nose of the character
         g.setColor(Color.BLACK);
-        g.fillArc(125, 250, 300, 100, 70, 20);
+        g.fillArc(125, nose, 300, 100, 70, 20);
 
         //Create a mouth 
         g.fillArc(175, 275, 250, 100, 180, 180);
 
         //create the tounge
         g.setColor(Color.RED);
-        g.fillArc(tongue, 345, 250, 50, 120, 120);
+        g.fillArc(220, tongue, 250, 50, 120, 120);
 
         //create eyebrows
         g.setColor(Color.BLACK);
-        g.fillArc(195, 180, 240, 30, 25, 50);
-        g.fillArc(40, 180, 240, 30, 10, 60);
+        //right 
+        g.fillArc(eyebrowR, 180, 240, 30, 25, 50);
+        //left
+        g.fillArc(eyebrowL, 180, 240, 30, 10, 60);
 
         //Make a Sun
         g.setColor(Color.YELLOW);
         g.fillArc(1, 1, 130, 130, 450, 450);
-        
         
         
         
@@ -175,35 +188,71 @@ public class A8Q1 extends JComponent implements ActionListener {
     // In here is where all the logic for my game will go
     public void gameLoop() {
         
-        //Make the tongue move across the screen
-        tongue = tongue + 4;
-        if(tongue > WIDTH){
-            tongue = 110;
-        }
+        //Make the tongue move up and down
+        if(tongue >= 365) {
+                tongueDirect = -1;
+            }
+            if(tongue <= 340) {
+                tongueDirect = 1;
+            }
+            tongue = tongue + tongueDirect * 1;
+       
         
         //the black line will move up and down from one end of the screen to the other
             if(line >=600) {
-                lineDirection = -1;
+                lineDirect = -1;
             }
             if(line <=10) {
-                lineDirection = 1;
+                lineDirect = 1;
             }
             //The speed it will move
-            line = line + lineDirection*10;
+            line = line + lineDirect * 10;
        
      //Move the eyes coming down, to its location
      //Once the eyes go up, it will stay there and shake
             if(eye >= 200) {
-                eyesDirection = -1;
+                eyesDirect = -1;
             }            
             if(eye <= 237) {
-                eyesDirection = 1;
+                eyesDirect = 1;
             }
             //It will move slow
-            eye = eye + eyesDirection*1;
+            eye = eye + eyesDirect * 2;
         
+             //move the nose up and down
+            if(nose >= 285) {
+                noseDirect = -1;
+            }
+            if(nose <= 265) {
+                noseDirect = 1;
+            }
+            nose = nose + noseDirect * 1;
+            
+            //Make the right eyebrow move quickly horizontally
+             if(eyebrowR >= 185) {
+                eyebrowRDirect = -1;
+            }
+            if(eyebrowR <= 200) {
+                eyebrowRDirect = 1;
+            }
+            eyebrowR = eyebrowR + eyebrowRDirect * 5;
+            
+              //Make the left eyebrow move quickly horizontally
+             if(eyebrowL >= 40) {
+                eyebrowLDirect = -1;
+            }
+            if(eyebrowL <= 40) {
+                eyebrowLDirect = 1;
+            }
+            eyebrowL = eyebrowL + eyebrowLDirect * 5;
     }
     
+    
+    
+
+    
+            
+
 
     // Used to implement any of the Mouse Actions
     private class Mouse extends MouseAdapter {
