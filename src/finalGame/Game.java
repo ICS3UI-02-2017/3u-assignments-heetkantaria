@@ -83,8 +83,11 @@ public class Game extends JComponent implements ActionListener {
         g.clearRect(0, 0, WIDTH, HEIGHT);
 
         // GAME DRAWING GOES HERE
-        
+           // draw the background
+        g.setColor(Color.BLACK);
+        g.fillRect(0,0,WIDTH,HEIGHT);
 		
+        
 		
         // GAME DRAWING ENDS HERE
     }

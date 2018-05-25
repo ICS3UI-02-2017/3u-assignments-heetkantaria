@@ -33,42 +33,31 @@ public class A8Q1 extends JComponent implements ActionListener {
     // timer used to run the game loop
     // this is what keeps our time running smoothly :)
     Timer gameTimer;
-    
-    
     // YOUR GAME VARIABLES WOULD GO HERE
-    
     //create a custom colour
     Color custom = new Color(66, 244, 226);
     Color tan = new Color(224, 178, 143);
     Color brown = new Color(112, 94, 84);
-
     //animate the tongue to move up and down
     int tongue = 345;
-   int tongueDirect = 1;
-   
+    int tongueDirect = 1;
     //animate so the lines move up and down
-     int line = 50;
+    int line = 50;
     int lineDirect = 1;
-
     //The eyes will move up and down
     int eye = 300;
     int eyesDirect = 1;
-    
-     //the nose moves up and down
+    //the nose moves up and down
     int nose = 250;
     int noseDirect = 1;
-    
     //make the  right eyebrows move side to side
     int eyebrowR = 195;
     int eyebrowRDirect = 1;
-    
     //make the  right eyebrows move side to side
     int eyebrowL = 40;
     int eyebrowLDirect = 1;
-    
+
     // GAME VARIABLES END HERE    
-    
-    
     // Constructor to create the Frame and place the panel in
     // You will learn more about this in Grade 12 :)
     public A8Q1() {
@@ -114,12 +103,12 @@ public class A8Q1 extends JComponent implements ActionListener {
 
         //create a background
         g.fillRect(0, 0, WIDTH, HEIGHT);
-       
+
         //Create lines for the background
         g.setColor(Color.BLACK);
-       g.fillRect(0, line, 1100, 30);
-         g.fillRect(0, line, 1100, 30);
-        
+        g.fillRect(0, line, 1100, 30);
+        g.fillRect(0, line, 1100, 30);
+
         //Draw a tan oval for the face
         g.setColor(tan);
         g.fillOval(100, 125, 400, 300);
@@ -146,7 +135,7 @@ public class A8Q1 extends JComponent implements ActionListener {
         //Create a small rectangle as a logo for the hat
         g.setColor(Color.YELLOW);
         g.fillRect(275, 25, 50, 70);
- 
+
         //create the nose of the character
         g.setColor(Color.BLACK);
         g.fillArc(125, nose, 300, 100, 70, 20);
@@ -168,18 +157,17 @@ public class A8Q1 extends JComponent implements ActionListener {
         //Make a Sun
         g.setColor(Color.YELLOW);
         g.fillArc(1, 1, 130, 130, 450, 450);
-        
-        
-        
-       
-        
+
+
+
+
+
 
         // GAME DRAWING ENDS HERE
     }
 
     // This method is used to do any pre-setup you might need to do
     // This is run before the game loop begins!
-    
     public void preSetup() {
         // Any of your pre setup before the loop starts should go here
     }
@@ -187,72 +175,65 @@ public class A8Q1 extends JComponent implements ActionListener {
     // The main game loop
     // In here is where all the logic for my game will go
     public void gameLoop() {
-        
+
         //Make the tongue move up and down
-        if(tongue >= 365) {
-                tongueDirect = -1;
-            }
-            if(tongue <= 340) {
-                tongueDirect = 1;
-            }
-            tongue = tongue + tongueDirect * 1;
-       
-        
+        if (tongue >= 365) {
+            tongueDirect = -1;
+        }
+        if (tongue <= 340) {
+            tongueDirect = 1;
+        }
+        tongue = tongue + tongueDirect * 1;
+
+
         //the black line will move up and down from one end of the screen to the other
-            if(line >=600) {
-                lineDirect = -1;
-            }
-            if(line <=10) {
-                lineDirect = 1;
-            }
-            //The speed it will move
-            line = line + lineDirect * 10;
-       
-     //Move the eyes coming down, to its location
-     //Once the eyes go up, it will stay there and shake
-            if(eye >= 200) {
-                eyesDirect = -1;
-            }            
-            if(eye <= 237) {
-                eyesDirect = 1;
-            }
-            //It will move slow
-            eye = eye + eyesDirect * 2;
-        
-             //move the nose up and down
-            if(nose >= 285) {
-                noseDirect = -1;
-            }
-            if(nose <= 265) {
-                noseDirect = 1;
-            }
-            nose = nose + noseDirect * 1;
-            
-            //Make the right eyebrow move quickly horizontally
-             if(eyebrowR >= 185) {
-                eyebrowRDirect = -1;
-            }
-            if(eyebrowR <= 200) {
-                eyebrowRDirect = 1;
-            }
-            eyebrowR = eyebrowR + eyebrowRDirect * 5;
-            
-              //Make the left eyebrow move quickly horizontally
-             if(eyebrowL >= 40) {
-                eyebrowLDirect = -1;
-            }
-            if(eyebrowL <= 40) {
-                eyebrowLDirect = 1;
-            }
-            eyebrowL = eyebrowL + eyebrowLDirect * 5;
+        if (line >= 600) {
+            lineDirect = -1;
+        }
+        if (line <= 10) {
+            lineDirect = 1;
+        }
+        //The speed it will move
+        line = line + lineDirect * 10;
+
+        //Move the eyes coming down, to its location
+        //Once the eyes go up, it will stay there and shake
+        if (eye >= 200) {
+            eyesDirect = -1;
+        }
+        if (eye <= 237) {
+            eyesDirect = 1;
+        }
+        //It will move slow
+        eye = eye + eyesDirect * 2;
+
+        //move the nose up and down
+        if (nose >= 285) {
+            noseDirect = -1;
+        }
+        if (nose <= 265) {
+            noseDirect = 1;
+        }
+        nose = nose + noseDirect * 1;
+
+        //Make the right eyebrow move quickly horizontally
+        if (eyebrowR >= 185) {
+            eyebrowRDirect = -1;
+        }
+        if (eyebrowR <= 200) {
+            eyebrowRDirect = 1;
+        }
+        eyebrowR = eyebrowR + eyebrowRDirect * 5;
+
+        //Make the left eyebrow move quickly horizontally
+        if (eyebrowL >= 40) {
+            eyebrowLDirect = -1;
+        }
+        if (eyebrowL <= 40) {
+            eyebrowLDirect = 1;
+        }
+        eyebrowL = eyebrowL + eyebrowLDirect * 5;
     }
-    
-    
-    
-
-    
-            
-
 
     // Used to implement any of the Mouse Actions
     private class Mouse extends MouseAdapter {
