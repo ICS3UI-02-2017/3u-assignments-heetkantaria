@@ -61,6 +61,7 @@ public class PongExample extends JComponent implements ActionListener {
     int score1 = 0;
     int score2 = 0;
     
+    
     //create custom font
     
     Font biggerFont = new Font("arial ", Font.BOLD, 36);
