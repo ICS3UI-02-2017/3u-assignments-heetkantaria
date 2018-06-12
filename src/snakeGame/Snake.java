@@ -14,16 +14,22 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 import java.util.ArrayList;
 import java.util.Random;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.Timer;
 import static snakeGame.Snake.snake;
+
+
 
 /**
  *
  * @author kanth4624
  */
 public final class Snake implements ActionListener, KeyListener {
-// Height and Width of our game
+
 
     //Title of the window
     String title = "Snake Game ";
@@ -37,7 +43,7 @@ public final class Snake implements ActionListener, KeyListener {
     Timer gameTimer;
     
     // YOUR GAME VARIABLES WOULD GO HERE
-         
+  
     public static Snake snake;
     public JFrame jframe;
     public RenderPanel renderPanel;
@@ -50,6 +56,7 @@ public final class Snake implements ActionListener, KeyListener {
     public boolean over = false, paused;
     public Dimension dim;
     private int speed;
+    private Object frame;
 
     // GAME VARIABLES END HERE   
     public Snake() {
@@ -88,10 +95,11 @@ public final class Snake implements ActionListener, KeyListener {
     // we use the Graphics object, g, to perform the drawing
     // NOTE: This is already double buffered!(helps with framerate/speed)
     public void paintComponent(Graphics g) {
+     
         
-        // GAME DRAWING GOES HERE
+        // GAME DRAWING BEGIN HERE
+        
     }
-
         // GAME DRAWING ENDS HERE
 
     // This method is used to do any pre-setup you might need to do
@@ -119,6 +127,8 @@ public final class Snake implements ActionListener, KeyListener {
         throw new UnsupportedOperationException();
     }
 
+    
+      
     // Used to implement any of the Mouse Actions
     private class Mouse extends MouseAdapter {
 

@@ -11,6 +11,7 @@ import javax.swing.JPanel;
  * @author kanth4624
  */
 public class RenderPanel extends JPanel {
+    private Object frame;
 
     @Override
     protected void paintComponent(Graphics g) {
