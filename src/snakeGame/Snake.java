@@ -14,22 +14,15 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 import java.util.ArrayList;
 import java.util.Random;
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.Timer;
 import static snakeGame.Snake.snake;
-
-
 
 /**
  *
  * @author kanth4624
  */
 public final class Snake implements ActionListener, KeyListener {
-
 
     //Title of the window
     String title = "Snake Game ";
@@ -41,9 +34,7 @@ public final class Snake implements ActionListener, KeyListener {
     // timer used to run the game loop
     // this is what keeps our time running smoothly :)
     Timer gameTimer;
-    
     // YOUR GAME VARIABLES WOULD GO HERE
-  
     public static Snake snake;
     public JFrame jframe;
     public RenderPanel renderPanel;
@@ -74,14 +65,18 @@ public final class Snake implements ActionListener, KeyListener {
     }
 
     public void startGame() {
-        
+
         //Add the variables, and set them to there value
         over = false;
         paused = false;
         time = 1;
+        // score begins at 0
         score = 0;
+        //tail length begins at 12 blocks-
         tailLength = 12;
+        //snake speed 
         speed = 0;
+        //Begins facing down 
         direction = DOWN;
         head = new Point(0, 1);
         random = new Random();
@@ -95,12 +90,9 @@ public final class Snake implements ActionListener, KeyListener {
     // we use the Graphics object, g, to perform the drawing
     // NOTE: This is already double buffered!(helps with framerate/speed)
     public void paintComponent(Graphics g) {
-     
-        
         // GAME DRAWING BEGIN HERE
-        
     }
-        // GAME DRAWING ENDS HERE
+    // GAME DRAWING ENDS HERE
 
     // This method is used to do any pre-setup you might need to do
     // This is run before the game loop begins!
@@ -115,20 +107,18 @@ public final class Snake implements ActionListener, KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-        throw new UnsupportedOperationException(); 
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        throw new UnsupportedOperationException(); 
+        throw new UnsupportedOperationException();
     }
 
     private void repaint() {
         throw new UnsupportedOperationException();
     }
 
-    
-      
     // Used to implement any of the Mouse Actions
     private class Mouse extends MouseAdapter {
 
@@ -167,14 +157,14 @@ public final class Snake implements ActionListener, KeyListener {
         preSetup();
         gameLoop();
 
-        //Add the render and speed
+        //Add the render Panel and speed
         renderPanel.repaint();
         speed++;
-        
-        //set snake speed to 3 - mid slwo and fast
+
+        //set snake speed to 3 - mid slow and fast
         if (speed % 3 == 0 && head != null && !over && !paused) {
             time++;
-            
+
             //When the snake is facing upward
             snakeParts.add(new Point(head.x, head.y));
             if (direction == UP) {
@@ -186,6 +176,7 @@ public final class Snake implements ActionListener, KeyListener {
                     over = true;
                 }
             }
+            
             //When the snake is facing downward
             if (direction == DOWN) {
 
@@ -209,12 +200,12 @@ public final class Snake implements ActionListener, KeyListener {
             if (direction == RIGHT) {
                 if (head.x + 1 < 80 && noTailAt(head.x + 1, head.y)) {
                     head = new Point(head.x + 1, head.y);
-              
+
                 } else {
                     over = true;
                 }
             }
-            
+
             //Once the snake eats the cherry it will add it, not lose any
             if (snakeParts.size() > tailLength) {
                 //Set to 0, so snake does not shrink 
@@ -222,13 +213,13 @@ public final class Snake implements ActionListener, KeyListener {
 
 
             }
-      
+
             if (cherry != null) {
                 if (head.equals(cherry)) {
 
                     //Score goes up by 1 everytime snake eats a cherry
                     score += 1;
-                    
+
                     //One block is added to the tail everytime snake eats cherry
                     tailLength++;
 
@@ -249,7 +240,6 @@ public final class Snake implements ActionListener, KeyListener {
         return true;
     }
 
-
     @Override
     public void keyPressed(KeyEvent e) {
 
@@ -261,7 +251,7 @@ public final class Snake implements ActionListener, KeyListener {
         if ((keys == KeyEvent.VK_A || keys == KeyEvent.VK_LEFT) && direction != RIGHT) {
             direction = LEFT;
         }
-        
+
         //If you hit right button D, or right arrow key, the snake will turn right
         if ((keys == KeyEvent.VK_D || keys == KeyEvent.VK_RIGHT) && direction != LEFT) {
             direction = RIGHT;
@@ -271,16 +261,17 @@ public final class Snake implements ActionListener, KeyListener {
         if ((keys == KeyEvent.VK_W || keys == KeyEvent.VK_UP) && direction != DOWN) {
             direction = UP;
         }
-        
-    //If you hit down button S, or down key, the snake will go down
+
+        //If you hit down button S, or down key, the snake will go down
         if ((keys == KeyEvent.VK_S || keys == KeyEvent.VK_DOWN) && direction != UP) {
             direction = DOWN;
         }
+        
+        //The space button is used to restart the game and to pause the game while playing 
         if (keys == KeyEvent.VK_SPACE) {
-
             if (over) {
-                
-               //Game will begin once everything is correct
+
+                //Game will begin once everything runs through correctly
                 startGame();
                 
             } else {
@@ -290,8 +281,7 @@ public final class Snake implements ActionListener, KeyListener {
         }
     }
 
-
-  /**
+    /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -299,6 +289,3 @@ public final class Snake implements ActionListener, KeyListener {
         snake = new Snake();
     }
 }
-
-
-

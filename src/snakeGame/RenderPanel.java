@@ -11,6 +11,7 @@ import javax.swing.JPanel;
  * @author kanth4624
  */
 public class RenderPanel extends JPanel {
+
     private Object frame;
 
     @Override
@@ -21,7 +22,7 @@ public class RenderPanel extends JPanel {
 
         //set background color black
         g.setColor(Color.BLACK);
-         
+
         //create two fonts set to Arial
         Font biggerFont = new Font("Arial", Font.BOLD, 20);
         Font biggerFont2 = new Font("Arial", Font.BOLD, 30);
@@ -44,11 +45,11 @@ public class RenderPanel extends JPanel {
         g.setColor(Color.RED);
         g.fillRect(snake.cherry.x * Snake.SCALE, snake.cherry.y * Snake.SCALE, Snake.SCALE, Snake.SCALE);
 
-        //displays score, length of snake, and time you are playing in seconds, on the screen
-        //add bigger font, and color 
+        //displays the score, length of snake, and time you are playing in seconds on the screen
+        //add bigger font, and color
         g.setFont(biggerFont);
-        String string = "SCORE: " + snake.score + " LENGTH: " + snake.tailLength + " TIME: " + snake.time / 20;
-        //set color white
+        String string = "SCORE: " + snake.score + " LENGTH: " + snake.tailLength + " TIME: " + snake.time / 20 + " sec";
+        //set color white of the words
         g.setColor(Color.WHITE);
         //Centered at the top 
         g.drawString(string, (int) (getWidth() / 2.5 - string.length() * 2f), 30);
@@ -58,8 +59,7 @@ public class RenderPanel extends JPanel {
         g.setColor(Color.CYAN);
         string = " GAME OVER! ";
         //Hit space to play again
-        
-        
+
         //The spot where "Game Over" is located
         if (snake.over) {
             //Centered in the middle
