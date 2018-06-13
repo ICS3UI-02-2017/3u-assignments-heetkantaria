@@ -69,6 +69,7 @@ public final class Snake implements ActionListener, KeyListener {
         //Add the variables, and set them to there value
         over = false;
         paused = false;
+        //timer on the screen
         time = 1;
         // score begins at 0
         score = 0;
@@ -79,9 +80,13 @@ public final class Snake implements ActionListener, KeyListener {
         //Begins facing down 
         direction = DOWN;
         head = new Point(0, 1);
+        //random placement of cherry
         random = new Random();
+        //the snake blocks
         snakeParts.clear();
+        //The fruit that snake will eat
         cherry = new Point(random.nextInt(80), random.nextInt(70));
+        //timer in seconds to count how long you are playing the game
         timer.start();
 
     }
@@ -168,7 +173,7 @@ public final class Snake implements ActionListener, KeyListener {
             //When the snake is facing upward
             snakeParts.add(new Point(head.x, head.y));
             if (direction == UP) {
-
+                //the head will be able to go up without seperating  
                 if (head.y - 1 >= 0 && noTailAt(head.x, head.y - 1)) {
                     head = new Point(head.x, head.y - 1);
 
@@ -176,11 +181,11 @@ public final class Snake implements ActionListener, KeyListener {
                     over = true;
                 }
             }
-            
+
             //When the snake is facing downward
             if (direction == DOWN) {
-
-                if (head.y + 1 < 67 && noTailAt(head.x, head.y + 1)) {
+                //the head will be able to go down without seperating
+                if (head.y + 1 < 68 && noTailAt(head.x, head.y + 1)) {
                     head = new Point(head.x, head.y + 1);
 
                 } else {
@@ -189,6 +194,7 @@ public final class Snake implements ActionListener, KeyListener {
             }
             //When the snake is in the left direction
             if (direction == LEFT) {
+                //the head will be able to go to the left side without seperating
                 if (head.x - 1 >= 0 && noTailAt(head.x - 1, head.y)) {
                     head = new Point(head.x - 1, head.y);
 
@@ -198,6 +204,7 @@ public final class Snake implements ActionListener, KeyListener {
             }
             //When the snake is in the right direction
             if (direction == RIGHT) {
+                //the head will be able to go to the right side without seperating
                 if (head.x + 1 < 80 && noTailAt(head.x + 1, head.y)) {
                     head = new Point(head.x + 1, head.y);
 
@@ -244,7 +251,7 @@ public final class Snake implements ActionListener, KeyListener {
     public void keyPressed(KeyEvent e) {
 
         //You can use W,S,A,D to play as well as arrow keys
-        //int for key is created 
+        //int for key is created to set those arrows and words to do a action when key is pressed
         int keys = e.getKeyCode();
 
         //If you hit A, or left arrow key, the snake will turnleft
@@ -266,14 +273,15 @@ public final class Snake implements ActionListener, KeyListener {
         if ((keys == KeyEvent.VK_S || keys == KeyEvent.VK_DOWN) && direction != UP) {
             direction = DOWN;
         }
-        
+
         //The space button is used to restart the game and to pause the game while playing 
+        //Space button function is added
         if (keys == KeyEvent.VK_SPACE) {
             if (over) {
 
                 //Game will begin once everything runs through correctly
                 startGame();
-                
+
             } else {
                 paused = !paused;
 
