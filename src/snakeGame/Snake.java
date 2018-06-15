@@ -173,7 +173,8 @@ public final class Snake implements ActionListener, KeyListener {
             //When the snake is facing upward
             snakeParts.add(new Point(head.x, head.y));
             if (direction == UP) {
-                //the head will be able to go up without seperating  
+                //the head will be able to go up without seperating
+                //body follows shape of the head
                 if (head.y - 1 >= 0 && noTailAt(head.x, head.y - 1)) {
                     head = new Point(head.x, head.y - 1);
 
@@ -185,6 +186,7 @@ public final class Snake implements ActionListener, KeyListener {
             //When the snake is facing downward
             if (direction == DOWN) {
                 //the head will be able to go down without seperating
+                //body follows shape of the head
                 if (head.y + 1 < 68 && noTailAt(head.x, head.y + 1)) {
                     head = new Point(head.x, head.y + 1);
 
@@ -195,6 +197,7 @@ public final class Snake implements ActionListener, KeyListener {
             //When the snake is in the left direction
             if (direction == LEFT) {
                 //the head will be able to go to the left side without seperating
+                //body follows shape of the head
                 if (head.x - 1 >= 0 && noTailAt(head.x - 1, head.y)) {
                     head = new Point(head.x - 1, head.y);
 
@@ -205,6 +208,7 @@ public final class Snake implements ActionListener, KeyListener {
             //When the snake is in the right direction
             if (direction == RIGHT) {
                 //the head will be able to go to the right side without seperating
+                //body follows shape of the head
                 if (head.x + 1 < 80 && noTailAt(head.x + 1, head.y)) {
                     head = new Point(head.x + 1, head.y);
 
