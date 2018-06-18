@@ -219,7 +219,7 @@ public final class Snake implements ActionListener, KeyListener {
 
             //Once the snake eats the cherry it will add it, not lose any
             if (snakeParts.size() > tailLength) {
-                //Set to 0, so snake does not shrink 
+                //Set to 0, so snake does not shrink or remove any peices while in motion
                 snakeParts.remove(0);
 
 
