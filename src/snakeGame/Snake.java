@@ -84,7 +84,7 @@ public final class Snake implements ActionListener, KeyListener {
         random = new Random();
         //the snake blocks
         snakeParts.clear();
-        //The fruit that snake will eat
+        //The fruit the snake will eat
         cherry = new Point(random.nextInt(80), random.nextInt(70));
         //timer in seconds to count how long you are playing the game
         timer.start();
@@ -167,7 +167,7 @@ public final class Snake implements ActionListener, KeyListener {
         speed++;
 
         //set snake speed to 3 - mid slow and fast
-        if (speed % 2 == 0 && head != null && !over && !paused) {
+        if (speed % 3 == 0 && head != null && !over && !paused) {
             time++;
 
             //When the snake is facing upward
